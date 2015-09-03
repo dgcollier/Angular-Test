@@ -1,9 +1,69 @@
 input.ng-touched.ng-invalid,
 select.ng-touched.ng-invalid {
 	border-color: #ea4335;
+	border-width: 2px;
 }
 
 input.ng-touched.ng-valid,
 select.ng-touched.ng-valid {
 	border-color: #34a853;
+	border-width: 2px;
 }
+
+#cardIcon,
+#cardName {
+	float: left;
+	margin-bottom: 25px;
+}
+
+#cardEmail,
+#cardDOB,
+#cardGit {
+	clear: left;
+}
+
+#cardName {
+	margin-left: 15px;
+}
+
+.well {
+	background-color: white;
+}
+
+.page-header {
+	border-color: #fbbc05;
+}
+
+#title {
+	color: #fbbc05;
+}
+
+.well {
+	border-color: #ea4335;
+}
+
+.form-group {
+	color: #4285f4;
+}
+
+#cardName {
+	color: #34a853;
+}
+
+#cardDOB {
+	color: #ea4335;	
+}
+
+#cardEmail {
+	color: #fbbc05;	
+}
+
+#cardGit,
+#cardGit > a {
+	color: #4285f4;	
+}
+
+/*google blue #4285f4*/
+/*google yellow #fbbc05*/
+/*google red #ea4335*/
+/*google green #34a853*/
