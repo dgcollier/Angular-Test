@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular Testing</title>
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/model-test.css">
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/angular.min.js"></script>
+</head>
+<body ng-app="modelTest">
+
+	<div class="container">
+		<header class="page-header">
+			<h1>Testing Angular Models</h1>
+		</header>
+		
+		<main class="row">
+			<form class="col-md-6" novalidate name="userForm">
+				<div class-"form-group">
+				    <label for="first_name">First Name</label>
+				    <input type="text" class="form-control" id="first_name" ng-model="user.firstName" required>
+			    </div>
+
+			    <div class-"form-group">
+				    <label for="last_name">Last Name</label>
+				    <input type="text" class="form-control" id="last_name"  ng-model="user.lastName" required>
+			    </div>
+
+			    <div class-"form-group">
+				    <label for="email">eMail</label>
+				    <input type="email" class="form-control" id="email" ng-model="user.email" required>
+			    </div>
+
+			    <div class-"form-group">
+				    <label for="dob">Date of Birth</label>
+				    <input type="date" class="form-control" id="dob" ng-model="user.dob" required>
+				</div>
+
+			    <div class-"form-group">
+				    <label for="github">Github Page</label>
+				    <input type="url" class="form-control" id="github" ng-model="user.github" required>
+				</div>
+
+				<div class-"form-group">
+					<label for="icon">Icon</label>
+					<select class="form-control" id="icon" ng-model="user.icon" required>
+						<option ng-repeat="pic in ['1', '2', '3', '4']" required>{{ pic }}</option>
+					</select>
+			    </div>
+			</form>
+
+			<div class="col-md-5">
+				<div class="well" >
+				<!-- ng-if="userForm.$valid" -->
+				    <img src="/img/logo{{ user.icon }}.png">
+				    <h2>{{ user.firstName}} {{ user.lastName }}</h2>
+				    <p>dob: {{ user.dob | date: format: longDate }}</p> 
+				    <p>email: {{ user.email }}</p>
+				    <p>github: <a href="{{ user.github }}" target="_blank">{{ user.github }}</a></p>
+				</div>
+			</div>
+		</main>
+	</div>
+	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/js/modelTest.js"></script>
+</body>
+</html>
