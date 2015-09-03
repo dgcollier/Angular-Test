@@ -44,14 +44,13 @@
 				<div class-"form-group">
 					<label for="icon">Icon</label>
 					<select class="form-control" id="icon" ng-model="user.icon" required>
-						<option ng-repeat="pic in ['1', '2', '3', '4']" required>{{ pic }}</option>
+						<option ng-repeat="pic in ['1', '2', '3', '4']">{{ pic }}</option>
 					</select>
 			    </div>
 			</form>
 
 			<div class="col-md-5">
-				<div class="well" >
-				<!-- ng-if="userForm.$valid" -->
+				<div class="well" ng-if="userForm.$valid">
 				    <img src="/img/logo{{ user.icon }}.png">
 				    <h2>{{ user.firstName}} {{ user.lastName }}</h2>
 				    <p>dob: {{ user.dob | date: format: longDate }}</p> 
