@@ -1,0 +1,6 @@
+li:first-child {
+	font-style: italic;
+}
+li:last-child {
+	font-weight: bold;
+}
