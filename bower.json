@@ -1,0 +1,16 @@
+{
+  "name": "angular-test.dev",
+  "version": "0.0.0",
+  "homepage": "https://github.com/dgcollier/Angular-Test",
+  "authors": [
+    "dgcollier <david@gcollier.me>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

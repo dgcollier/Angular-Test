@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular Testing</title>
+
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/fizzbuzz-test.css">
+	<script type="text/javascript" src="/js/angular.min.js"></script> 
+</head>
+<body ng-app="fizzbuzzTest">
+	<div class="container">
+		<h1>Fizzbuzz Test</h1>
+
+		<ul class="ng-cloak">
+			<li ng-repeat="n in [] | range:101">
+				<span ng-if="n % 3 == 0">Fizz</span>
+				<span ng-if="n % 5 == 0">Buzz</span>
+				<span ng-if="n % 3 != 0 && n % 5 != 0">{{ n }}</span>
+			</li>	
+		</ul>
+	</div>
+
+
+	
+	<script type="text/javascript" src="/js/fizzbuzzTest.js"></script>
+</body>
+</html>

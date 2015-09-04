@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Angular Testing</title>
 	<link rel="stylesheet" type="text/css" href="/css/template-test.css">
-	<script type="text/javascript" src="/js/angular.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/angular.min.js"></script> 
 </head>
 <body ng-app="templateTest">
 
-	<ul>
+	<h1>Template Test</h1>
+
+	<ul class="ng-cloak">
 		<li ng-repeat="num in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]" ng-hide="num % 3 != 0">
 			{{ num }} is not divisible by 3!
 		</li>
 	</ul>
 
-	<ul>
+	<ul class="ng-cloak">
 		<li ng-repeat="letter in ['A', 'B', 'C', 'D', 'E', 'F']">
 			{{ letter | lowercase }}
 		</li>
 	</ul>
 
-	<img ng-repeat=" pic in ['bridge', 'shore', 'duck', 'cliff']" ng-src="/img/{{ pic }}.JPG" alt="Throw a duck at Ben!">
+	<img class="ng-cloak" ng-repeat=" pic in ['bridge', 'shore', 'cliff', 'duck']" ng-src="/img/{{ pic }}.JPG" alt="Throw a duck at Ben!">
 
+	<p><a href="/model-test.html">Model Test >></a></p>
 
-	<script type="text/javascript" src="/js/templateTest.js"></script>
+	<script class="ng-cloak" type="text/javascript" src="/js/templateTest.js"></script>
 </body>
-</html>
+</html>	

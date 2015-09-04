@@ -4,3 +4,6 @@ li:first-child {
 li:last-child {
 	font-weight: bold;
 }
+body {
+	background-color: papayawhip;
+}

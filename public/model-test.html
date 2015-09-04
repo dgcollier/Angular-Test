@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/model-test.css">
 	<script type="text/javascript" src="/js/jquery.min.js"></script>
-	<script type="text/javascript" src="/js/angular.min.js"></script>
+	<script type="text/javascript" src="/js/angular.min.js"></script> 
 </head>
 <body ng-app="modelTest">
 
@@ -16,7 +16,7 @@
 		</header>
 		
 		<main class="row">
-			<form class="col-md-6" novalidate name="userForm">
+			<form class="col-md-6 ng-cloak" novalidate name="userForm">
 				<div class="form-group">
 				    <label for="first_name">First Name</label>
 				    <input type="text" class="form-control" id="first_name" ng-model="user.firstName" required>
@@ -25,6 +25,11 @@
 			    <div class="form-group">
 				    <label for="last_name">Last Name</label>
 				    <input type="text" class="form-control" id="last_name"  ng-model="user.lastName" required>
+			    </div>
+
+			    <div class="form-group">
+				    <label for="title">Title</label>
+				    <input type="text" class="form-control" id="title"  ng-model="user.title" required>
 			    </div>
 
 			    <div class="form-group">
@@ -51,12 +56,18 @@
 			</form>
 
 			<div class="col-md-5 col-md-offset-1">
-				<div class="well">
+				<div class="well ng-cloak">
 				    <img id="cardIcon" src="/img/logo{{ user.icon }}.png">
 
 				    <h1 id="cardName">
 				    	{{ user.firstName}} {{ user.lastName }}
 			    	</h1>
+
+			    	<h5 id="cardTitle">
+				    	{{ user.title}}
+			    	</h5>
+
+			    	<hr id="cardBreak">
 
 				    <p id="cardDOB">
 				    	D.O.B.: {{ user.dob | date: format: longDate }}
@@ -76,6 +87,7 @@
 				</div>
 			</div>
 		</main>
+		<p><a href="/template-test.html"> << Template Test</a></p>
 	</div>
 	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="/js/modelTest.js"></script>
