@@ -15,27 +15,24 @@
 			<h1 id="title">Coffee Dave's Cart</h1>
 		</header>
 
-		<main class="row" class="ng-cloak" ng-controller="FormController as cart">
-				<form class="col-md-6 ng-cloak" novalidate name="itemForm" ng-submit="cart.addItem(itemForm)">
+		<main class="row" ng-controller="FormController as cart">
+				<form class="col-md-6 ng-cloak well" novalidate name="itemForm" ng-submit="cart.addItem(itemForm)">
 					<div class="form-group">
 					    <label for="item">Item Name</label>
 					    <input type="text" class="form-control" id="item" name="item" ng-model="cart.newItem.item" autofocus required>
 				    </div>
-
-					
+	
 				    <div class="form-group">
 					    <label for="price">Unit Price</label>
 					    <input type="number" class="form-control" id="price" name="price"  ng-model="cart.newItem.price" required>
-				    </div>
-				    
+				    </div>	    
 
 				    <div class="form-group" ng-if="itemForm.$valid">
-				    	<input type="submit" class="btn btn-success" id="submit" ng-click="reset()">
+				    	<input type="submit" class="btn btn-success" id="submit">
 				    </div>
-
 				</form>
 
-			<div class="table-responsive">
+			<div class="well table-responsive">
 				<table class="ng-cloak table">
 					<thead>
 						<tr>

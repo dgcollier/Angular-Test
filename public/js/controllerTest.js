@@ -6,12 +6,12 @@
 	app.controller('FormController', function() {
 		this.items = [
 			{ 
-				item: 'Drip Coffee',
+				item: 'Drip coffee',
 				quantity: 2,
 				price: 2.10
 			},
 			{
-				item: 'Pour-over Coffee',
+				item: 'Pour-over coffee',
 				quantity: 1,
 				price: 3.75
 			}
@@ -61,7 +61,7 @@
 				items+= this.items[i].quantity;
 			};
 
-			// Fee is $3 flat, plus $0.50 for each item
+			// Fee is $3 flat, plus $0.50 for each additional item
 			var fee = ((items -1) * .5) + 3; 
 
 			if (this.items.length == 0) {
