@@ -56,7 +56,7 @@
 			</form>
 
 			<div class="col-md-5 col-md-offset-1">
-				<div class="well ng-cloak">
+				<div class="well ng-cloak"> <!-- ng-if="userForm.$valid" -->
 				    <img id="cardIcon" src="/img/logo{{ user.icon }}.png">
 
 				    <h1 id="cardName">
@@ -70,7 +70,7 @@
 			    	<hr id="cardBreak">
 
 				    <p id="cardDOB">
-				    	D.O.B.: {{ user.dob | date: format: longDate }}
+				    	D.O.B.: {{ user.dob | date: 'MMMM dd, y' }}
 			    	</p> 
 
 				    <p id="cardEmail">
@@ -79,7 +79,6 @@
 
 				    <p id="cardGit">
 				    	Github: 
-
 				    	<a href="https://github.com/{{ user.github }}" target="_blank">
 				    		https://github.com/{{ user.github }}
 			    		</a>
