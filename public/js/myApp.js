@@ -10,4 +10,13 @@
             this.showElement = !this.showElement;
         };
     });
+
+    app.controller("OtherController", function() {
+    	this.myList = [
+	    	{text: 'Some text here'},
+	    	{text: 'Some text there'},
+	    	{text: 'Some text everywhere'},
+	    	{text: 'Some text far away'}
+    	];
+    });
 })();

@@ -5,15 +5,21 @@
 </head>
 <body>
 
-<div ng-controller="ExampleController as ex">
-    <div ng-show="ex.showElement">
-        I may or may not be visible
-    </div>
+	<div ng-controller="ExampleController as ex">
+	    <div ng-show="ex.showElement">
+	        I may or may not be visible
+	    </div>
 
-    <button ng-click="ex.toggleElement()">Toggle Element</button>
-</div>
+	    <button ng-click="ex.toggleElement()">Toggle Element</button>
+	</div>
 
-<script type="text/javascript" src="/js/angular.min.js"></script>
-<script type="text/javascript" src="/js/myApp.js"></script>
+	<ul ng-controller="OtherController as ctrl">
+		<li ng-repeat="list in ctrl.myList">
+			{{ list.text }}
+		</li>
+	</ul>
+
+	<script type="text/javascript" src="/js/angular.min.js"></script>
+	<script type="text/javascript" src="/js/myApp.js"></script>
 </body>
 </html>
