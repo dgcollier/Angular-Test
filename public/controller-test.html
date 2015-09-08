@@ -22,10 +22,12 @@
 					    <input type="text" class="form-control" id="item" name="item" ng-model="cart.newItem.item" autofocus required>
 				    </div>
 
+					
 				    <div class="form-group">
 					    <label for="price">Unit Price</label>
 					    <input type="number" class="form-control" id="price" name="price"  ng-model="cart.newItem.price" required>
 				    </div>
+				    
 
 				    <div class="form-group" ng-if="itemForm.$valid">
 				    	<input type="submit" class="btn btn-success" id="submit" ng-click="reset()">
@@ -49,6 +51,7 @@
 							<td>{{ item.price | currency }}</td>
 							<td><input class="quantityInput" min="1" max="10" type="number" value="{{ item.quantity }}" ng-model="item.quantity"></td>
 							<td>{{ item.price * item.quantity | currency }}</td>
+							<td><button class="btn btn-xs btn-warning" ng-click="cart.removeItem(index)">x</button></td>
 						</tr>
 					</tbody>
 				</table>

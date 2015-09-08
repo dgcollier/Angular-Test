@@ -1,11 +1,9 @@
-input.ng-touched.ng-invalid,
-select.ng-touched.ng-invalid {
+input.ng-touched.ng-invalid {
 	border-color: #ea4335; /* Google red */
 	border-width: 2px;
 }
 
-input.ng-touched.ng-valid,
-select.ng-touched.ng-valid {
+input.ng-touched.ng-valid {
 	border-color: #5cb85c; /* Bootstrap success */
 	border-width: 2px; 
 }
@@ -18,4 +16,9 @@ a,
 table,
 #update {
 	margin: 15px;
+}
+
+a {
+	position: fixed;
+	bottom: 25px;
 }

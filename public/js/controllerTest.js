@@ -29,8 +29,13 @@
 
 			itemForm.$setPristine();
 			itemForm.$setUntouched();
+
+			$("#item").focus();
 		};
 
+		this.removeItem = function(index) {
+	        this.items.splice(index, 1);
+	    };
 
 		this.getSubtotal = function() {
 			var subtotal = 0;
@@ -51,12 +56,17 @@
 		this.getDeliveryFee = function() {
 			var items = 0;
 
+
 			for(var i = 0; i < this.items.length; i++) {
 				items+= this.items[i].quantity;
 			};
 
 			// Fee is $3 flat, plus $0.50 for each item
 			var fee = ((items -1) * .5) + 3; 
+
+			if (this.items.length == 0) {
+				fee = 3;
+			}
 
 			return fee;
 		};
