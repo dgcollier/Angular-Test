@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>Bootstrap an Angular Module</title>
+</head>
+<body>
+
+<div ng-controller="ExampleController as ex">
+    <div ng-show="ex.showElement">
+        I may or may not be visible
+    </div>
+
+    <button ng-click="ex.toggleElement()">Toggle Element</button>
+</div>
+
+<script type="text/javascript" src="/js/angular.min.js"></script>
+<script type="text/javascript" src="/js/myApp.js"></script>
+</body>
+</html>
